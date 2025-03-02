@@ -1,0 +1,20 @@
+require 'rake/testtask'
+require 'json'
+
+namespace :grammars do
+  desc 'Validate grammar files'
+  task :validate do
+    puts "Validating grammars..."
+    Dir.glob('grammars/*.json').each do |file|
+      begin
+        JSON.parse(File.read(file))
+        puts "✓ #{file} is valid JSON"
+      rescue JSON::ParserError => e
+        puts "✗ #{file} is invalid JSON: #{e.message}"
+        exit 1
+      end
+    end
+  end
+end
+
+task default: ['grammars:validate']

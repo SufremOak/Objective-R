@@ -1,0 +1,9 @@
+Objective-R:
+  type: programming
+  extensions:
+    - ".or"
+    - ".rr"
+  tm_scope: source.objr
+  ace_mode: text
+  color: "#4c1d95"
+  language_id: 999  # Use a unique ID

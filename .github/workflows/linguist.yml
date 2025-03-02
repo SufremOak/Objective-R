@@ -1,0 +1,41 @@
+name: Update Linguist Grammar
+
+on:
+  push:
+    paths:
+      - '.github/linguist/**'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-grammar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          
+      - name: Install Dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Validate Grammar
+        run: |
+          bundle exec rake compiler:test
+          bundle exec rake grammars:validate
+        working-directory: .github/linguist
+        
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update linguist grammar"
+          title: "Update Linguist Grammar"
+          body: "Updates the Objective-R grammar definitions for GitHub Linguist"
+          branch: update-linguist-grammar
+          base: main

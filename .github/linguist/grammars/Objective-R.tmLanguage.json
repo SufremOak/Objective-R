@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Objective-R",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#interfaces"
+		},
+		{
+			"include": "#rsnames"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.objective-r",
+				"match": "\\b(if|while|for|return|fn|let|use|export|implementation|interface)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.objective-r",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.objective-r",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.objective-r",
+					"begin": "//",
+					"end": "$"
+				},
+				{
+					"name": "comment.block.objective-r",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.objective-r",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.objective-r",
+					"match": "\\b(Self|String|Box)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.objective-r",
+					"match": "\\b(fn|new|release|RSLib|main)\\b"
+				}
+			]
+		},
+		"interfaces": {
+			"patterns": [
+				{
+					"name": "entity.name.interface.objective-r",
+					"match": "\\b(interface)\\b"
+				}
+			]
+		},
+		"rsnames": {
+			"patterns": [
+				{
+					"name": "support.class.rsname.objective-r",
+					"match": "\\b(RS[A-Za-z]+)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.objr"
+}
