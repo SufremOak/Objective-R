@@ -1,0 +1,52 @@
+{
+  "name": "objective-r",
+  "displayName": "Objective-R",
+  "description": "Objective-R language support",
+  "version": "0.1.2",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:objective-r"
+  ],
+  "main": "./out/client.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "objective-r",
+        "aliases": [
+          "Objective-R",
+          "objective-r"
+        ],
+        "extensions": [
+          ".rr"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "objective-r",
+        "scopeName": "source.objr",
+        "path": "./syntaxes/objective-r.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p ."
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "vscode": "^1.1.37",
+    "vscode-languageclient": "^7.0.0",
+    "vscode-languageserver": "^7.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.8",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  }
+}
