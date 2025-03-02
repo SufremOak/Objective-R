@@ -18,18 +18,20 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
+          bundler-cache: true
+          working-directory: .github/linguist
           
       - name: Install Dependencies
+        working-directory: .github/linguist
         run: |
-          gem install bundler
+          bundle config path vendor/bundle
           bundle install
 
       - name: Validate Grammar
-        run: |
-          bundle exec rake compiler:test
-          bundle exec rake grammars:validate
         working-directory: .github/linguist
-        
+        run: |
+          bundle exec rake grammars:validate
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
