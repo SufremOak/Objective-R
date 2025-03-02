@@ -1,0 +1,25 @@
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/charlock_holmes-0.7.9/ext/charlock_holmes
+/opt/hostedtoolcache/Ruby/3.0.7/x64/bin/ruby -I /opt/hostedtoolcache/Ruby/3.0.7/x64/lib/ruby/3.0.0 -r ./siteconf20250302-1887-dr5aiq.rb extconf.rb
+checking for -licui18n... yes
+checking for unicode/ucnv.h... yes
+checking for -lz... yes
+checking for -licuuc... yes
+checking for -licudata... yes
+checking for icu that requires explicit C++ version flag... no
+Static linking is disabled.
+creating Makefile
+
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/charlock_holmes-0.7.9/ext/charlock_holmes
+make DESTDIR\= clean
+
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/charlock_holmes-0.7.9/ext/charlock_holmes
+make DESTDIR\=
+compiling converter.c
+compiling encoding_detector.c
+compiling ext.c
+compiling transliterator.cpp
+linking shared-object charlock_holmes/charlock_holmes.so
+
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/charlock_holmes-0.7.9/ext/charlock_holmes
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 charlock_holmes.so ./.gem.20250302-1887-95b7u2/charlock_holmes

@@ -1,0 +1,16 @@
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/github-linguist-7.30.0/ext/linguist
+/opt/hostedtoolcache/Ruby/3.0.7/x64/bin/ruby -I /opt/hostedtoolcache/Ruby/3.0.7/x64/lib/ruby/3.0.0 -r ./siteconf20250302-1887-kcbvfe.rb extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/github-linguist-7.30.0/ext/linguist
+make DESTDIR\= clean
+
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/github-linguist-7.30.0/ext/linguist
+make DESTDIR\=
+compiling lex.linguist_yy.c
+compiling linguist.c
+linking shared-object linguist/linguist.so
+
+current directory: /home/runner/work/Objective-R/Objective-R/.github/linguist/vendor/bundle/ruby/3.0.0/gems/github-linguist-7.30.0/ext/linguist
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 linguist.so ./.gem.20250302-1887-zg0pvp/linguist
